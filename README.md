@@ -22,3 +22,28 @@ The project includes **automated hyperparameter optimization** using **Optuna** 
 ---
 
 ## 📂 Project Structure
+.
+├── fmnist_small.csv # Dataset (Fashion-MNIST subset)
+├── ANN.py # Main training & Optuna code
+├── requirements.txt # Dependencies
+└── README.md # Project documentation
+
+## ⚙️ Setup & Installation
+```bash
+# Clone repo
+git clone https://github.com/your-username/ArtificialNeuralNetwork.git
+cd ArtificialNeuralNetwork
+
+# Create virtual environment (recommended)
+python3 -m venv ann-env
+source ann-env/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+▶️ Usage
+
+Launch Jupyter and open the notebook:
+jupyter notebook ANN_FashionMNIST.ipynb
+
+
