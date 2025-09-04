@@ -1,49 +1,61 @@
 # Artificial Neural Network - Fashion MNIST
 
-A **PyTorch** based fully connected **Artificial Neural Network (ANN)** trained on the [Fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist) dataset.  
-The project includes **automated hyperparameter optimization** using **Optuna** to maximize model accuracy.
+This project implements a fully connected artificial neural network (ANN) using PyTorch, trained on the Fashion-MNIST dataset. The model's architecture and hyperparameters are optimized using Optuna to achieve high classification accuracy.
 
----
+## 📚 Dataset
 
-## 📌 Features
-- Fully connected feedforward neural network (`nn.Linear` layers with BatchNorm, ReLU, and Dropout).
-- Trained on **Fashion-MNIST** (grayscale 28×28 clothing images, 10 classes).
-- Hyperparameter search with **Optuna**:
-  - Hidden layers
-  - Neurons per layer
-  - Epochs
-  - Learning rate
-  - Dropout rate
-  - Batch size
-  - Optimizer type (Adam, SGD, RMSprop)
-  - Weight decay
-- Device-aware (CPU, CUDA GPU, or Apple MPS if available).
+The model is trained on the Fashion-MNIST dataset, which consists of 28x28 grayscale images representing 10 different clothing categories:
 
----
+- T-shirt/top
+- Trouser
+- Pullover
+- Dress
+- Coat
+- Sandal
+- Shirt
+- Sneaker
+- Bag
+- Ankle boot
 
-## 📂 Project Structure
-.
-├── fmnist_small.csv # Dataset (Fashion-MNIST subset)
-├── ANN.py # Main training & Optuna code
-├── requirements.txt # Dependencies
-└── README.md # Project documentation
+## 🧠 Model Architecture
 
-## ⚙️ Setup & Installation
+- **Input Layer:** 784 neurons (28x28 pixels flattened)
+- **Hidden Layers:** Configurable via Optuna optimization
+- **Activation Functions:** ReLU
+- **Regularization:** Dropout and Batch Normalization
+- **Output Layer:** 10 neurons (one per class)
+
+## 🔧 Hyperparameter Optimization
+
+Optuna is used to optimize the following hyperparameters:
+
+- Number of hidden layers
+- Neurons per layer
+- Epochs
+- Learning rate
+- Dropout rate
+- Batch size
+- Optimizer type (Adam, SGD, RMSprop)
+- Weight decay
+
+## 🚀 Requirements
+
+To run this project, install the required dependencies:
+
 ```bash
-# Clone repo
-git clone https://github.com/your-username/ArtificialNeuralNetwork.git
-cd ArtificialNeuralNetwork
-
-# Create virtual environment (recommended)
-python3 -m venv ann-env
-source ann-env/bin/activate
-
-# Install dependencies
 pip install -r requirements.txt
+Clone the repository:
+git clone https://github.com/wurb0/ArtificialNeuralNetwork.git
+cd ArtificialNeuralNetwork
+Open the Jupyter Notebook
+Follow the instructions within the notebook to train and evaluate the model.
 
-▶️ Usage
+📈 Results
 
-Launch Jupyter and open the notebook:
-jupyter notebook ANN_FashionMNIST.ipynb
+The notebook includes training and evaluation metrics, such as:
 
+Training and test accuracy
 
+Loss curves
+
+Hyperparameter optimization results
